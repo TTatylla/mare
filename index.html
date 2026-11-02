@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Maré</title>
+<meta name="theme-color" content="#12B3AE">
+<meta name="description" content="Organização calma para o dia a dia.">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<style>
+  html,body{margin:0;height:100%}
+  body{background:#FFF7EC;color:#2A2140;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+  @media (prefers-color-scheme: dark){body{background:#15122A;color:#F2EEFF}}
+  #splash{min-height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:24px;box-sizing:border-box;text-align:center}
+  #splash img{width:96px;height:96px;border-radius:26px;box-shadow:0 10px 30px rgba(80,50,120,.25);animation:bob 2.4s ease-in-out infinite}
+  #splash h1{margin:0;font-size:28px}
+  #splash p{margin:0;max-width:34ch;line-height:1.5;opacity:.85}
+  #splash .btn{display:inline-block;margin-top:6px;background:#11A6A2;color:#fff;border-radius:14px;padding:12px 18px;font-weight:700;text-decoration:none;border:0;font-size:16px}
+  @keyframes bob{50%{transform:translateY(-6px)}}
+  @media (prefers-reduced-motion: reduce){#splash img{animation:none}}
+</style>
+</head>
+<body>
+<div id="splash">
+  <img src="icon-192.png" alt="">
+  <h1>Maré</h1>
+  <p id="splashMsg">Abrindo…</p>
+</div>
+<script src="shell.js"></script>
+</body>
+</html>
