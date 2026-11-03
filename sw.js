@@ -1,5 +1,5 @@
 /* Service worker do Maré: deixa o app abrir sem internet e mostra as notificações. */
-var VERSAO = "mare-v1";
+var VERSAO = "mare-v2";
 var ARQUIVOS = ["./", "index.html", "shell.js", "manifest.webmanifest", "icon-192.png", "icon-512.png", "badge-96.png"];
 
 self.addEventListener("install", function (e) {

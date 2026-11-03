@@ -100,6 +100,11 @@
     if (html && html !== guardado) {
       grava(APP, html);
       if (!guardado) montar(html);
+      else {
+        /* chegou versão nova do Maré: recarrega uma vez para já mostrar */
+        var ja = false; try { ja = sessionStorage.getItem("mare-recarregou") === "1"; } catch (e) {}
+        if (!ja) { try { sessionStorage.setItem("mare-recarregou", "1"); } catch (e) {} location.reload(); }
+      }
     }
   }).catch(function (e) {
     if (!guardado) msg("Não consegui abrir o Maré agora. Confira a internet e tente de novo. (" + (e && e.message ? e.message : e) + ")");
